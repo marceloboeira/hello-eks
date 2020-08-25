@@ -1,31 +1,31 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-kubernetes
+  name: hello-eks
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: hello-kubernetes
+    app: hello-eks
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-kubernetes
+  name: hello-eks
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hello-kubernetes
+      app: hello-eks
   template:
     metadata:
       labels:
-        app: hello-kubernetes
+        app: hello-eks
     spec:
       containers:
-      - name: hello-kubernetes
-        image: paulbouwer/hello-kubernetes:1.8
+      - name: hello-eks
+        image: marceloboeira/hello-eks:1.0
         ports:
         - containerPort: 8080

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "bytes": "^3.1.0",
+    "ec2-info": "^1.0.3",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "handlebars": "^4.7.6",

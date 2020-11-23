@@ -52,7 +52,7 @@ spec:
     spec:
       containers:
       - name: hello-eks
-        image: marceloboeira/marceloboeira:1.0
+        image: marceloboeira/hello-eks:1.0
         ports:
         - containerPort: 8080
 ```
